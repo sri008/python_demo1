@@ -23,7 +23,7 @@ pipeline {
       stage('Analysis') {
          steps {
             withSonarQubeEnv('sonar'){
-                sh '/opt/sonar-scanner-3.3.0.1492-linux/bin/sonar-scanner -Dsonar.projectName=pythonproject -Dsonar.projectVersion=2 -Dsonar.projectKey=pythonproject -Dsonar.python.coverage.reportPath=coverage.xml -Dsonar.analysis.mode= -Dsonar.source=.'
+                sh '/opt/sonar-scanner-3.3.0.1492-linux/bin/sonar-scanner -Dsonar.projectName=pythonproject -Dsonar.projectVersion=2 -Dsonar.projectKey=pythonproject -Dsonar.python.coverage.reportPath=coverage.xml -Dsonar.analysis.mode= -Dsonar.sources=.'
             }
          }
       }
