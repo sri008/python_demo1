@@ -30,7 +30,6 @@ pipeline {
       stage('Test') {
          steps {
             sh 'python3 test.py'
-            sh 'deactivate'
          }
          post{
             always{
